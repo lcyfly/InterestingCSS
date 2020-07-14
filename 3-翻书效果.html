@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(20, 214, 20);
+        }
+        
+        .book {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -150px;
+            margin-top: -200px;
+            width: 300px;
+            height: 400px;
+            background-color: #fff;
+            transform-style: preserve-3d;
+            perspective: 2000px;
+            box-shadow: inset 300px 0 100px rgba(0, 0, 0, .5), 0 20px 100px rgba(0, 0, 0, .5);
+            transition: 1s;
+        }
+        
+        .book:hover {
+            transform: rotate(-10deg);
+            box-shadow: inset 20px 0 100px rgba(0, 0, 0, .5), 0 20px 100px rgba(0, 0, 0, .5);
+        }
+        
+        .book::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #475b02;
+            transform-origin: bottom;
+            transform: skewX(-45deg);
+        }
+        
+        .book::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -5px;
+            width: 5px;
+            height: 100%;
+            background-color: #7ea301;
+            transform-origin: left;
+            transform: skewY(-45deg);
+        }
+        
+        .imgbox {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-origin: left;
+            transition: 1s;
+        }
+        
+        .book:hover .imgbox {
+            transform: rotateY(-135deg);
+        }
+        
+        .detail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 20px;
+            z-index: -1;
+            font-family: "Microsoft Yahei", Georgia, Serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="book">
+        <div class="imgbox">
+            <img src="/images/deng.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h1>This Is Just To Say</h1>
+            <p>
+                Whenever you need me，
+                <br> I'll be here。
+                <br> Whenever you're in trouble，
+                <br> I'm always near。
+                <br> Whenever you feel alone，
+                <br> and you think everyone has given up。。。
+                <br> Reach out for me，
+                <br> and I will give you my everlasting love。
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
