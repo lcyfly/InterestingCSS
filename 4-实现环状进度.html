@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 150px auto;
+            background-color: rgb(121, 97, 97);
+        }
+        
+        .bg1 {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            margin-top: -150px;
+            width: 150px;
+            height: 300px;
+            background-color: rgb(121, 97, 97);
+            border-radius: 150px 0 0 150px;
+            z-index: 3;
+        }
+        
+        .bg2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            width: 150px;
+            height: 300px;
+            background-color: rgb(121, 97, 97);
+            border-radius: 0 150px 150px 0;
+            z-index: 1;
+        }
+        
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 280px;
+            height: 280px;
+            transform: translate(-50%, -50%);
+            background-color: purple;
+            border-radius: 50%;
+            z-index: 5;
+        }
+        /* 左边半圆 往右旋转 z-index 小于bg1 大于bg2*/
+        
+        .rotate1 {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            margin-top: -150px;
+            width: 150px;
+            height: 300px;
+            background-color: green;
+            border-radius: 150px 0 0 150px;
+            z-index: 2;
+            transform-origin: 100% 50%;
+            animation: rotate1 5s linear forwards;
+        }
+        
+        @keyframes rotate1 {
+            0% {
+                transform: rotate(0);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+        /* 右边半圆 往右旋转  先不给宽高逆时针旋转180度，跟着rotate1旋转一半后完成最后半圆旋转*/
+        
+        .rotate2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            background-color: green;
+            border-radius: 0 150px 150px 0;
+            z-index: 4;
+            transform-origin: 0 50%;
+            animation: rotate2 5s linear forwards;
+        }
+        
+        @keyframes rotate2 {
+            0% {
+                transform: rotate(-180deg);
+                /* width: 150px;
+                height: 300px; */
+            }
+            100% {
+                width: 150px;
+                height: 300px;
+                transform: rotate(180deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="content"></div>
+
+        <div class="rotate1"></div>
+        <div class="rotate2"></div>
+    </div>
+
+
+</body>
+
+</html>
