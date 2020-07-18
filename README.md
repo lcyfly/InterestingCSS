@@ -17,3 +17,6 @@
 4-环状进度
 
 ![img](gif/huanjindu.gif)
+
+5-简单的百叶窗
+![img](gif/baiyechuang.gif)
