@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .envelope {
+            position: relative;
+            margin: 300px auto;
+            width: 400px;
+            height: 250px;
+            border: 6px solid #333333;
+        }
+        
+        .envelope:hover .jiao {
+            transform: rotateX(180deg);
+            z-index: 2;
+        }
+        
+        .jiao {
+            position: absolute;
+            top: 0;
+            left: -6px;
+            width: 0;
+            height: 0;
+            border-top: 150px solid #333333;
+            border-left: 206px solid transparent;
+            border-right: 206px solid transparent;
+            transform-origin: top;
+            transition: all 1s;
+            z-index: 3;
+        }
+        
+        .jiao2 {
+            position: absolute;
+            top: 0;
+            left: -6px;
+            width: 0;
+            height: 0;
+            border-top: 150px solid transparent;
+            border-left: 206px solid #333333;
+            border-right: 206px solid #333333;
+            border-bottom: 100px solid #333333;
+            z-index: 3;
+        }
+        
+        .envelope_content {
+            overflow: hidden;
+            position: absolute;
+            bottom: 100px;
+            left: 56px;
+            width: 300px;
+            height: 0;
+            background-color: #ffffff;
+            border: 2px solid #333333;
+            text-align: center;
+            word-spacing: 0.2em;
+            z-index: 2;
+            transition: all 1s;
+        }
+        
+        .envelope_content p {
+            text-align: right;
+            margin-right: 20px;
+        }
+        
+        .envelope:hover .envelope_content {
+            height: 300px;
+        }
+        
+        .heart {
+            position: absolute;
+            left: 175px;
+            bottom: 85px;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            z-index: 4;
+            transform: rotate(-45deg);
+        }
+        
+        .heart::before {
+            content: "";
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: -25px;
+            left: 0;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        
+        .heart::after {
+            content: "";
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 25px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        
+        .envelope:hover .heart {
+            transform: rotate(135deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="envelope">
+        <div class="jiao"></div>
+        <div class="jiao2"></div>
+        <div class="heart"></div>
+        <div class="envelope_content">
+            <h2>Starlight</h2>
+            The sun is getting down
+            <br> The melody of the night is near me
+            <br> You still look far away
+            <br> What are you searching for,dear?
+            <br><br><br>
+            <p>-----love</p>
+        </div>
+    </div>
+</body>
+
+</html>

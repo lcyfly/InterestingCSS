@@ -20,3 +20,6 @@
 
 5-简单的百叶窗
 ![img](gif/baiyechuang.gif)
+
+6-心形信封
+![img](gif/xinfeng.gif)
