@@ -1,6 +1,6 @@
 # InterestingCSS
 
-写的一些有意思的css动画
+写的一些有意思的前端页面、动画。。
 
 1-loading  loading加载
 
