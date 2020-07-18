@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百叶窗</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            position: relative;
+            float: left;
+            list-style-type: none;
+        }
+        
+        body {
+            background-color: #333333;
+        }
+        
+        .imgbox {
+            margin: 150px auto;
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #cccccc;
+        }
+        
+        .imgbox:hover li {
+            width: 150px;
+        }
+        
+        .imgbox li:hover {
+            width: 400px;
+        }
+        
+        .imgbox li {
+            overflow: hidden;
+            width: 200px;
+            height: 300px;
+            transition: all 1s;
+        }
+        
+        .title {
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            color: #ffffff;
+            line-height: 50px;
+            background: rgba(0, 0, 0, .6);
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="imgbox">
+        <li><img src="/images/baiyechuang-1.jpg" alt="">
+            <div class="title">InterestingDog</div>
+        </li>
+        <li><img src="/images/baiyechuang-2.jpg" alt="">
+            <div class="title">InterestingDog</div>
+        </li>
+        <li><img src="/images/baiyechuang-3.jpg" alt="">
+            <div class="title">InterestingDog</div>
+        </li>
+        <li><img src="/images/baiyechuang-4.jpg" alt="">
+            <div class="title">InterestingDog</div>
+        </li>
+        <li><img src="/images/baiyechuang-5.jpg" alt="">
+            <div class="title">InterestingDog</div>
+        </li>
+    </ul>
+
+</body>
+
+</html>
